@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<ns3:modelConfig xsi:type="ns3:ModelConfig" folder="" pauseCalculations="false" entityCode="1342" loadPath="Dfnodes4" entityName="Dfnodes 4" version="52" name="Dfnodes 4" lastUpdated="2024-09-25T12:42:38.738-04:00" lastUpdatedBy="joeya" id="admin:MODEL:Dfnodes4" xmlns:ns6="http://www.modelshop.com/services/account/types" xmlns:ns5="http://www.modelshop.com/datacore/message/types" xmlns:ns8="http://www.modelshop.com/datacore/generator/types" xmlns:ns7="http://www.modelshop.com/datacore/repository/types" xmlns:ns2="http://www.modelshop.com/datacore/view/types" xmlns:ns4="http://www.modelshop.com/services/model/types" xmlns:ns3="http://www.modelshop.com/model/model/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <datalists entityCode="1343" entityName="Employees" version="52" name="Employees" created="2024-09-25T12:39:58.913-04:00" createdBy="joeya" lastUpdated="2024-09-25T12:40:30.433-04:00" lastUpdatedBy="joeya" id="Employees">
+        <dataFields type="text" fieldCode="100" rawType="java.lang.String" allowNull="true" name="Last Name" initialized="true" id="Last Name"/>
+        <dataFields type="text" fieldCode="101" rawType="java.lang.String" allowNull="true" name="First Name" initialized="true" id="First Name"/>
+        <dataFields type="text" fieldCode="102" rawType="java.lang.String" allowNull="true" name="Title" initialized="true" id="Title"/>
+        <dataFields type="integer" fieldCode="103" rawType="java.lang.Long" allowNull="true" name="DeptCode" initialized="true" id="DeptCode"/>
+        <dataFields type="date" fieldCode="104" rawType="com.modelshop.datacore.datatype.Date" allowNull="true" name="HireDate" initialized="true" id="HireDate"/>
+        <dataFields type="text" fieldCode="105" rawType="java.lang.String" allowNull="true" name="Department Name" initialized="true" id="Department Name"/>
+        <dataFields type="currency" fieldCode="106" rawType="java.math.BigDecimal" allowNull="true" name="Salary" initialized="true" id="Salary"/>
+        <dataFields type="text" fieldCode="107" rawType="java.lang.String" allowNull="true" name="Phone" initialized="true" id="Phone"/>
+        <dataFields type="text" fieldCode="108" rawType="java.lang.String" allowNull="true" name="eMail" initialized="true" id="eMail"/>
+        <dataFields type="text" fieldCode="109" rawType="java.lang.String" allowNull="true" name="Department" initialized="true" id="Department"/>
+        <dataFields type="text" fieldCode="110" rawType="java.lang.String" allowNull="true" name="Manager" initialized="true" id="Manager"/>
+        <dataFields type="text" fieldCode="111" rawType="java.lang.String" allowNull="true" name="Full Name" initialized="true" id="Full Name"/>
+        <dataFields type="float" format="0.0" fieldCode="112" rawType="java.lang.Double" allowNull="true" name="YearsTenure" initialized="true" id="YearsTenure"/>
+        <dataFields type="float" format="0.00" fieldCode="113" rawType="java.lang.Double" allowNull="true" name="&lt;5" initialized="true" id="&lt;5"/>
+        <dataFields type="float" format="0.00" fieldCode="114" rawType="java.lang.Double" allowNull="true" name="5 to 10" initialized="true" id="5 to 10"/>
+        <dataFields type="float" format="0.00" fieldCode="115" rawType="java.lang.Double" allowNull="true" name="&gt;10" initialized="true" id="&gt;10"/>
+        <dataFields type="currency" fieldCode="116" rawType="java.math.BigDecimal" allowNull="true" name="Salary Bin" initialized="true" id="Salary Bin"/>
+        <dataFields type="text" fieldCode="117" rawType="java.lang.String" allowNull="true" name="sourceName" initialized="true" id="sourceName">
+            <defaultValue source="'Manual Entry'"/>
+        </dataFields>
+        <dataFields type="integer" fieldCode="118" rawType="java.lang.Long" allowNull="true" name="lineNumber" initialized="true" id="lineNumber">
+            <defaultValue source="id"/>
+        </dataFields>
+        <dataFields type="boolean" fieldCode="120" rawType="java.lang.Boolean" name="Is Complete" initialized="true" lastUpdated="2024-09-25T12:40:30.735-04:00" lastUpdatedBy="joeya" id="Is Complete"/>
+        <dataFields type="decision" fieldCode="119" rawType="com.modelshop.datacore.decisionflow.DecisionType" name="Employees Decision" description="Generated decision field for Decision Flow Employees Decision Flow" initialized="true" id="Employees Decision">
+            <infoDecision decisionFlow="Employees Decision Flow"/>
+        </dataFields>
+    </datalists>
+    <views allColumns="true" default="true" modelView="true" entityName="Dfnodes 4" name="Dfnodes 4" description="Default view for list dfnodes" id="Dfnodes 4"/>
+    <views allColumns="false" default="true" entityName="Employees" version="16" name="Employees" description="Default view for list Employees" created="2024-09-25T12:40:30.433-04:00" createdBy="joeya" lastUpdated="2024-09-25T12:40:30.433-04:00" lastUpdatedBy="joeya" id="Employees">
+        <columns>Last Name</columns>
+        <columns>First Name</columns>
+        <columns>Title</columns>
+        <columns>DeptCode</columns>
+        <columns>HireDate</columns>
+        <columns>Department Name</columns>
+        <columns>Salary</columns>
+        <columns>Phone</columns>
+        <columns>eMail</columns>
+        <columns>Department</columns>
+        <columns>Manager</columns>
+        <columns>Full Name</columns>
+        <columns>YearsTenure</columns>
+        <columns>&lt;5</columns>
+        <columns>5 to 10</columns>
+        <columns>&gt;10</columns>
+        <columns>Salary Bin</columns>
+        <columns>sourceName</columns>
+        <columns>lineNumber</columns>
+        <columns>Employees Decision</columns>
+        <columns>Is Complete</columns>
+    </views>
+    <decisionFlows decisionField="Employees Decision" entityName="Employees" version="52" name="Employees Decision Flow" description="" created="2024-09-25T12:40:06.570-04:00" createdBy="joeya" lastUpdated="2024-09-25T12:42:38.738-04:00" lastUpdatedBy="joeya" id="Employees Decision Flow">
+        <decisionSteps decisionStepType="outcome" name="Low" id="Low">
+            <afterLogic source="isComplete = true;"/>
+            <layout width="150" height="60" relativeX="0" relativeY="4845" absoluteX="450" absoluteY="4845"/>
+        </decisionSteps>
+        <decisionSteps decisionStepType="logic" logicStepType="switch" name="Determine Salary" id="Determine Salary">
+            <conditionLogic transition="High" id="30fc02df-285b-4846-b381-51b71f455e92">
+                <condition source="salary &gt; 100000"/>
+            </conditionLogic>
+            <conditionLogic transition="Low" id="2bb2cc68-e101-40fd-91ee-e558455a5b54">
+                <condition source="salary &lt;= 100000"/>
+            </conditionLogic>
+            <transitions toStep="Low" name="Low" id="Determine Salary=&gt;Low"/>
+            <transitions toStep="High" name="High" id="Determine Salary=&gt;High"/>
+            <layout width="150" height="60" relativeX="0" relativeY="4920" absoluteX="150" absoluteY="4920"/>
+        </decisionSteps>
+        <decisionSteps decisionStepType="start" entityName="Employees" name="Start" id="Start">
+            <transitions toStep="Determine Salary" id="Start=&gt;Determine Salary"/>
+            <layout width="150" height="60" relativeX="0" relativeY="4920" absoluteX="-150" absoluteY="4920"/>
+        </decisionSteps>
+        <decisionSteps decisionStepType="outcome" name="High" id="High">
+            <afterLogic source="isComplete = true;"/>
+            <layout width="150" height="60" relativeX="0" relativeY="5000" absoluteX="450" absoluteY="5000"/>
+        </decisionSteps>
+    </decisionFlows>
+    <connectors layoutDetected="true" entityName="Employees" version="12" name="Employees" created="2024-09-25T12:39:58.913-04:00" createdBy="joeya" lastUpdated="2024-09-25T12:39:58.913-04:00" lastUpdatedBy="joeya" id="Employees">
+        <connectorFields ignore="false" mapField="Last Name" type="text" rawType="String" allowNull="true" name="Last Name" id="Last Name"/>
+        <connectorFields ignore="false" mapField="First Name" type="text" rawType="String" allowNull="true" name="First Name" id="First Name"/>
+        <connectorFields ignore="false" mapField="Title" type="text" rawType="String" allowNull="true" name="Title" id="Title"/>
+        <connectorFields ignore="false" mapField="DeptCode" type="integer" rawType="Long" allowNull="true" name="DeptCode" id="DeptCode"/>
+        <connectorFields ignore="false" mapField="HireDate" type="date" rawType="Date" allowNull="true" name="HireDate" id="HireDate"/>
+        <connectorFields ignore="false" mapField="Department Name" type="text" rawType="String" allowNull="true" name="Department Name" id="Department Name"/>
+        <connectorFields ignore="false" mapField="Salary" type="currency" rawType="BigDecimal" allowNull="true" name="Salary" id="Salary"/>
+        <connectorFields ignore="false" mapField="Phone" type="text" rawType="String" allowNull="true" name="Phone" id="Phone"/>
+        <connectorFields ignore="false" mapField="eMail" type="text" rawType="String" allowNull="true" name="eMail" id="eMail"/>
+        <connectorFields ignore="false" mapField="Department" type="text" rawType="String" allowNull="true" name="Department" id="Department"/>
+        <connectorFields ignore="false" mapField="Manager" type="text" rawType="String" allowNull="true" name="Manager" id="Manager"/>
+        <connectorFields ignore="false" mapField="Full Name" type="text" rawType="String" allowNull="true" name="Full Name" id="Full Name"/>
+        <connectorFields ignore="false" mapField="YearsTenure" type="float" format="0.0" rawType="Long" allowNull="true" name="YearsTenure" id="YearsTenure"/>
+        <connectorFields ignore="false" mapField="&lt;5" type="float" format="0.00" rawType="Long" allowNull="true" name="&lt;5" id="&lt;5"/>
+        <connectorFields ignore="false" mapField="5 to 10" type="float" format="0.00" rawType="Long" allowNull="true" name="5 to 10" id="5 to 10"/>
+        <connectorFields ignore="false" mapField="&gt;10" type="float" format="0.00" rawType="Long" allowNull="true" name="&gt;10" id="&gt;10"/>
+        <connectorFields ignore="false" mapField="Salary Bin" type="currency" rawType="BigDecimal" allowNull="true" name="Salary Bin" id="Salary Bin"/>
+        <connectorFields mapField="sourceName" type="text" rawType="String" allowNull="true" name="sourceName" id="sourceName"/>
+        <connectorFields mapField="lineNumber" type="integer" rawType="Long" allowNull="true" name="lineNumber" id="lineNumber"/>
+        <dataSource connectorUrl="Employees.csv">
+            <fileSource>
+                <dataSourceRefs>Employees.csv</dataSourceRefs>
+            </fileSource>
+            <loadFilter/>
+        </dataSource>
+        <mediaConfig connectorMediaType="textfile">
+            <textMedia/>
+        </mediaConfig>
+    </connectors>
+</ns3:modelConfig>
